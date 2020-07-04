@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>vue基础</title>
+  <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    {{msg}}
+    <br>
+    <span>基本信息：{{shcool.name}}-->{{shcool.mobile}}</span>
+    <h1>{{aihao}}</h1>
+  </div>
+<!-- el挂载点不要挂在html和body -->
+<!-- vue-text里面的内容加上去也会被覆盖 -->
+<!-- vue-html里面的内容加上去也不会被覆盖，适合的数据如a标签 -->
+  <script>
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        msg: '你好，Vue！！',
+        shcool: {
+          name: 'jack',
+          mobile: '888-999-0101'
+        },
+        aihao: ['旅游', '学习', '敲代码']
+      },
+      methods: {}
+    });
+  </script>
+</body>
+</html>
